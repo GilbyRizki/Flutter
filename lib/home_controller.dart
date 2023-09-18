@@ -29,4 +29,14 @@ class HomeController extends GetxController {
     isOpen(Open);
     print(isOpen.value);
   }
+
+  RxInt x = 0.obs;
+
+  void increase() {
+    x.value++;
+  }
+
+  void decrease() {
+    x.value--;
+  }
 }

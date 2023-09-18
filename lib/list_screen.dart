@@ -6,6 +6,9 @@ class ListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Halaman List Screen'),
+      ),
       body: Center(
         child: Text('Ini halaman list screen'),
       ),
