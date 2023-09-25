@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_2/home_controller.dart';
-import 'package:getx_2/second_screen.dart';
+import 'package:getx_2/controller/home_controller.dart';
+// import 'package:getx_2/second_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,8 +17,8 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Get.bottomSheet(Container(
                   color: Colors.white,
-                  width: 100,
-                  height: 100,
+                  width: 150,
+                  height: 150,
                   child: Column(
                     children: [
                       TextButton(
@@ -33,7 +33,23 @@ class HomeScreen extends StatelessWidget {
                           onPressed: () {
                             Get.toNamed('/listsc');
                           },
-                          child: Text('List Screen'))
+                          child: Text('List Screen')),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      TextButton(
+                          onPressed: () {
+                            Get.toNamed('/mapel');
+                          },
+                          child: Text('Input Mapel')),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      TextButton(
+                          onPressed: () {
+                            Get.toNamed('/semuaFungsi');
+                          },
+                          child: Text('Semua Fungsi'))
                     ],
                   ),
                 ));
@@ -74,7 +90,7 @@ class HomeScreen extends StatelessWidget {
             }),
             Obx(() => Row(
                   children: [
-                    Text(hc.isOpen.value ? 'Open' : 'Close'),
+                    Text(hc.isOpen.value ? 'Buka' : 'Tutup'),
                     Spacer(),
                     Switch(
                         value: hc.isOpen.value,
