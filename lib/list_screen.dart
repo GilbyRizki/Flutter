@@ -31,7 +31,7 @@ class ListScreen extends StatelessWidget {
               itemCount: hc.SiswaName.length,
               itemBuilder: (context, index) {
                 return ListTile(
-                  title: Text('${hc.SiswaName.value[index]}'),
+                  title: Text('${hc.SiswaName[index]}'),
                 );
               },
             ),

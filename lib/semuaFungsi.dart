@@ -82,8 +82,8 @@ class SemuaFungsi extends StatelessWidget {
                   shrinkWrap: true,
                   itemCount: hc.SiswaName.length,
                   itemBuilder: (context, index) {
-                    return Card(
-                      child: Text('${hc.SiswaName.value[index]}'),
+                    return ListTile(
+                      title: Text('${hc.SiswaName[index]}'),
                     );
                   },
                 ),

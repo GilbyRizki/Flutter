@@ -65,13 +65,13 @@ class HomeController extends GetxController {
 
   void tambahKeList(String nama) {
     SiswaName.add(nama);
-    print(SiswaName.value);
+    // print(SiswaName.value);
   }
 
   void addSiswa(String nama) {
     SiswaName.add(nama);
     namaSiswa.text = '';
-    print(SiswaName.value);
+    // print(SiswaName.value);
   }
 
   void removeSiswa(int index) {
@@ -80,7 +80,7 @@ class HomeController extends GetxController {
 
   void addMatpel(String namaMatpel, String jnsMatpel) {
     ListMatpel[namaMatpel] = jnsMatpel;
-    print(ListMatpel.value);
+    // print(ListMatpel.value);
   }
 
   void EditKelas(String editNamaKelas) {
