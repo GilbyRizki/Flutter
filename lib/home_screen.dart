@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
                 Get.bottomSheet(Container(
                   color: Colors.white,
                   width: 200,
-                  height: 200,
+                  height: 300,
                   child: Column(
                     children: [
                       TextButton(
@@ -108,7 +108,10 @@ class HomeScreen extends StatelessWidget {
                           hc.setIsOpen(value);
                         }),
                   ],
-                ))
+                )),
+            SizedBox(
+              height: 10,
+            ),
           ],
         ),
       ),

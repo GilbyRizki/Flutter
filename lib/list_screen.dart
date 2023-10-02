@@ -36,9 +36,6 @@ class ListScreen extends StatelessWidget {
               },
             ),
           )),
-          GetBuilder<HomeController>(builder: (hc) {
-            return Text(hc.nama);
-          }),
         ],
       ),
     );

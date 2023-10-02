@@ -44,9 +44,6 @@ class SemuaFungsi extends StatelessWidget {
                         icon: Icon(Icons.remove))
                   ],
                 ),
-                GetBuilder<HomeController>(builder: (hc) {
-                  return Text(hc.nama);
-                }),
                 Obx(() => Row(
                       children: [
                         Text(hc.isOpen.value ? 'Buka' : 'Tutup'),
