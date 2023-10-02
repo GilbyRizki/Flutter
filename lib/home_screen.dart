@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_2/controller/home_controller.dart';
+import 'controller/home_controller.dart';
 // import 'package:getx_2/second_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,8 +17,8 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Get.bottomSheet(Container(
                   color: Colors.white,
-                  width: 150,
-                  height: 150,
+                  width: 200,
+                  height: 200,
                   child: Column(
                     children: [
                       TextButton(
@@ -47,9 +47,17 @@ class HomeScreen extends StatelessWidget {
                       ),
                       TextButton(
                           onPressed: () {
+                            Get.toNamed('/gantiKelas');
+                          },
+                          child: Text('Ganti Nama Kelas')),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      TextButton(
+                          onPressed: () {
                             Get.toNamed('/semuaFungsi');
                           },
-                          child: Text('Semua Fungsi'))
+                          child: Text('Semua Fungsi')),
                     ],
                   ),
                 ));

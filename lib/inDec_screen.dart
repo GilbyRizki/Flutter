@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getx_2/controller/home_controller.dart';
+import 'controller/home_controller.dart';
 import 'package:get/get.dart';
 
 class InDecScreen extends StatelessWidget {

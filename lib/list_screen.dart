@@ -39,19 +39,6 @@ class ListScreen extends StatelessWidget {
           GetBuilder<HomeController>(builder: (hc) {
             return Text(hc.nama);
           }),
-          Obx(() => Row(
-                children: [
-                  Text(hc.isOpen.value ? 'Buka' : 'Tutup'),
-                  Spacer(),
-                  Switch(
-                      value: hc.isOpen.value,
-                      inactiveThumbColor: Colors.red,
-                      activeColor: Colors.green,
-                      onChanged: (value) {
-                        hc.setIsOpen(value);
-                      }),
-                ],
-              ))
         ],
       ),
     );

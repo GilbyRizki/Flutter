@@ -6,6 +6,7 @@ class HomeController extends GetxController {
   TextEditingController namaSiswa = TextEditingController();
   TextEditingController namaMatpel = TextEditingController();
   TextEditingController jnsMatpel = TextEditingController();
+  TextEditingController editKelas = TextEditingController();
 
   static final HomeController _instance = HomeController._internal();
 
@@ -20,6 +21,7 @@ class HomeController extends GetxController {
   RxInt x = 0.obs;
   RxList SiswaName = RxList([]);
   RxMap<String, String> ListMatpel = RxMap<String, String>();
+  final kelas = 'Kelas'.obs;
 
   // RxString nama = RxString('');
   // Rx<String> nama = Rx<String>('');
@@ -79,5 +81,9 @@ class HomeController extends GetxController {
   void addMatpel(String namaMatpel, String jnsMatpel) {
     ListMatpel[namaMatpel] = jnsMatpel;
     print(ListMatpel.value);
+  }
+
+  void EditKelas(String editNamaKelas) {
+    kelas.value = editNamaKelas;
   }
 }

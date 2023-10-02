@@ -22,9 +22,11 @@ class SemuaFungsi extends StatelessWidget {
                 Container(
                     color: const Color.fromARGB(255, 255, 17, 0),
                     width: 500,
-                    child: Text('Jumlah Siswa di Kelas',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 18))),
+                    child: Obx(
+                      () => Text(hc.kelas.value,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 18)),
+                    )),
                 Row(
                   children: [
                     IconButton(
@@ -60,36 +62,64 @@ class SemuaFungsi extends StatelessWidget {
                     )),
               ]),
             ),
-            Text('Nama Siswa', style: TextStyle(fontSize: 18)),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+                width: 500,
+                color: const Color.fromARGB(255, 255, 17, 0),
+                child: Text(
+                  'Nama Siswa',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 18),
+                )),
             Expanded(
-                child: Obx(
-              () => ListView.builder(
-                shrinkWrap: true,
-                itemCount: hc.SiswaName.length,
-                itemBuilder: (context, index) {
-                  return Card(
-                    child: Text('${hc.SiswaName.value[index]}'),
-                  );
-                },
+                child: Container(
+              width: 500,
+              color: Colors.orange,
+              child: Obx(
+                () => ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: hc.SiswaName.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: Text('${hc.SiswaName.value[index]}'),
+                    );
+                  },
+                ),
               ),
             )),
-            Text('Nama Mata Pelajaran', style: TextStyle(fontSize: 18)),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+                width: 500,
+                color: const Color.fromARGB(255, 255, 17, 0),
+                child: Text('Nama Mata Pelajaran',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 18))),
             Expanded(
-                child: Obx(
-              () => ListView.builder(
-                shrinkWrap: true,
-                itemCount: hc.ListMatpel.length,
-                itemBuilder: (context, index) {
-                  String key = hc.ListMatpel.keys.elementAt(index);
-                  return Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text('${key}'),
-                        Text('${hc.ListMatpel[key]}'),
-                      ]);
-                },
+                child: Container(
+              color: Colors.orange,
+              child: Obx(
+                () => ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: hc.ListMatpel.length,
+                  itemBuilder: (context, index) {
+                    String key = hc.ListMatpel.keys.elementAt(index);
+                    return Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('${key}'),
+                          Text('${hc.ListMatpel[key]}'),
+                        ]);
+                  },
+                ),
               ),
             )),
+            SizedBox(
+              height: 10,
+            ),
           ],
         ),
       ),
